@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7E11E80A20BF429100BB04F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E80920BF429100BB04F6 /* AppDelegate.swift */; };
-		7E11E80C20BF429100BB04F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11E80B20BF429100BB04F6 /* ViewController.swift */; };
 		7E11E80F20BF429100BB04F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E11E80D20BF429100BB04F6 /* Main.storyboard */; };
 		7E11E81120BF429200BB04F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E11E81020BF429200BB04F6 /* Assets.xcassets */; };
 		7E11E81420BF429200BB04F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E11E81220BF429200BB04F6 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		7E11E80620BF429100BB04F6 /* MarvelSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E11E80920BF429100BB04F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E11E80B20BF429100BB04F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E11E80E20BF429100BB04F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E11E81020BF429200BB04F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E11E81320BF429200BB04F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,53 @@
 		7E11E80820BF429100BB04F6 /* MarvelSearch */ = {
 			isa = PBXGroup;
 			children = (
-				7E11E80920BF429100BB04F6 /* AppDelegate.swift */,
-				7E11E80B20BF429100BB04F6 /* ViewController.swift */,
-				7E11E80D20BF429100BB04F6 /* Main.storyboard */,
-				7E11E81020BF429200BB04F6 /* Assets.xcassets */,
-				7E11E81220BF429200BB04F6 /* LaunchScreen.storyboard */,
-				7E11E81520BF429200BB04F6 /* Info.plist */,
+				7E11E81F20BF432400BB04F6 /* Model */,
+				7E11E81E20BF430E00BB04F6 /* ModelController */,
+				7E11E81D20BF430500BB04F6 /* ViewController */,
+				7E11E81C20BF42F400BB04F6 /* Views */,
+				7E11E81B20BF42E500BB04F6 /* Resources */,
 			);
 			path = MarvelSearch;
+			sourceTree = "<group>";
+		};
+		7E11E81B20BF42E500BB04F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E80920BF429100BB04F6 /* AppDelegate.swift */,
+				7E11E81020BF429200BB04F6 /* Assets.xcassets */,
+				7E11E81520BF429200BB04F6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E11E81C20BF42F400BB04F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E11E80D20BF429100BB04F6 /* Main.storyboard */,
+				7E11E81220BF429200BB04F6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E11E81D20BF430500BB04F6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7E11E81E20BF430E00BB04F6 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		7E11E81F20BF432400BB04F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E11E80C20BF429100BB04F6 /* ViewController.swift in Sources */,
 				7E11E80A20BF429100BB04F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DBM67E5D74;
-				INFOPLIST_FILE = MarvelSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MarvelSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DBM67E5D74;
-				INFOPLIST_FILE = MarvelSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MarvelSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
