@@ -48,21 +48,25 @@ class PoweredPersonModelController {
         // Not needed
         
         // URLSessionDataTask + Resume + Decode
-//        URLSession.shared.dataTask(with: completeURL) { (data, _, error) in
-//            if let error = error {
-//                print("❌Error downloading PoweredPerson with DataTask: \(error.localizedDescription)")
-//                completion(nil) ; return
-//            }
-//            guard let data = data else { completion(nil) ; return }
-//            let jsonDecoder = JSONDecoder()
-//            do {
-//
-//            } catch {
-//                print("<#T##items: Any...##Any#>")
-//            } catch {
-//
-//            }
-//        }.resume()
+        URLSession.shared.dataTask(with: completeURL) { (data, _, error) in
+            if let error = error {
+                print("❌Error downloading PoweredPerson with DataTask: \(error.localizedDescription)")
+                completion(nil) ; return
+            }
+            guard let data = data else { completion(nil) ; return }
+            let jsonDecoder = JSONDecoder()
+            do {
+                let firstLevelData = try jsonDecoder.decode(FirstLevelData.self, from: data)
+                let poweredPerson = firstLevelData.data.results[0]
+                completion(poweredPerson) ; return
+            } catch DecodingError.keyNotFound(let codingKey, let context){
+                print("❌Error: Coding key not found: \(codingKey) in \(context)")
+                completion(nil) ; return
+            } catch {
+                print("Error decoding fetched PoweredPerson: \(error.localizedDescription)")
+                completion(nil) ; return
+            }
+        }.resume()
     }
 }
 
