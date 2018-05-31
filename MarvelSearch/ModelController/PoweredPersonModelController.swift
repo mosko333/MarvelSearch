@@ -68,6 +68,24 @@ class PoweredPersonModelController {
             }
         }.resume()
     }
+    
+    static func fetchImageWith(person: PoweredPerson, completion: @escaping ((UIImage) -> Void) ) {
+        // URL
+        //http://i.annihil.us/u/prod/marvel/i/mg/2/80/511a79a0451a3/portrait_xlarge.jpg
+        guard var url = URL(string: person.thumbnail.path) else { completion(#imageLiteral(resourceName: "noImage")) ; return }
+        url.appendPathComponent("portrait_fantastic")
+        url.appendPathExtension(person.thumbnail.format)
+        print("📡\(url.absoluteString)📡")
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                print("❌ Error downloading image with DataTask: \(error.localizedDescription)")
+                completion(#imageLiteral(resourceName: "noImage")) ; return
+            }
+            guard let data = data, let image = UIImage(data: data) else { completion(#imageLiteral(resourceName: "noImage")) ; return }
+            completion(image)
+        }.resume()
+    }
 }
 
 

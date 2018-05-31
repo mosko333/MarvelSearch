@@ -16,9 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        PoweredPersonModelController.fetchPoweredPersonWith(name: "Thor") { (person) in
-//            print(person?.name)
-//        }
+        PoweredPersonModelController.fetchPoweredPersonWith(name: "Thor") { (person) in
+            guard let person = person else { return }
+            print(person.name)
+            PoweredPersonModelController.fetchImageWith(person: person, completion: { (image) in
+                print("test")
+            })
+        }
         
         return true
     }
