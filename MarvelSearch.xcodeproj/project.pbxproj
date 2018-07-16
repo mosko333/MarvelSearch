@@ -14,6 +14,8 @@
 		7EF1F6C320BF488700AC2208 /* PoweredPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1F6C220BF488700AC2208 /* PoweredPerson.swift */; };
 		7EF1F6C520BF4FF000AC2208 /* PoweredPersonModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1F6C420BF4FF000AC2208 /* PoweredPersonModelController.swift */; };
 		7EF1F6C820BF535A00AC2208 /* MD5Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1F6C720BF535A00AC2208 /* MD5Digest.swift */; };
+		7EF1F6CA20BFA20300AC2208 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1F6C920BFA20300AC2208 /* SearchViewController.swift */; };
+		7EF1F6CC20BFA21500AC2208 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF1F6CB20BFA21500AC2208 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7EF1F6C220BF488700AC2208 /* PoweredPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoweredPerson.swift; sourceTree = "<group>"; };
 		7EF1F6C420BF4FF000AC2208 /* PoweredPersonModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoweredPersonModelController.swift; sourceTree = "<group>"; };
 		7EF1F6C720BF535A00AC2208 /* MD5Digest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5Digest.swift; sourceTree = "<group>"; };
+		7EF1F6C920BFA20300AC2208 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7EF1F6CB20BFA21500AC2208 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		7E11E81D20BF430500BB04F6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7EF1F6C920BFA20300AC2208 /* SearchViewController.swift */,
+				7EF1F6CB20BFA21500AC2208 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -189,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF1F6CA20BFA20300AC2208 /* SearchViewController.swift in Sources */,
 				7EF1F6C820BF535A00AC2208 /* MD5Digest.swift in Sources */,
 				7E11E80A20BF429100BB04F6 /* AppDelegate.swift in Sources */,
+				7EF1F6CC20BFA21500AC2208 /* DetailViewController.swift in Sources */,
 				7EF1F6C320BF488700AC2208 /* PoweredPerson.swift in Sources */,
 				7EF1F6C520BF4FF000AC2208 /* PoweredPersonModelController.swift in Sources */,
 			);

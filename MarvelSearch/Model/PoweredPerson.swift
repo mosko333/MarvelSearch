@@ -6,25 +6,25 @@
 //  Copyright © 2018 Adam Moskovich. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct FirstLevelData : Codable {
+struct FirstLevelData: Codable {
     let data: DataDictionary
     struct DataDictionary: Codable {
-        let results : [PoweredPerson]
+        let results: [PoweredPerson]
     }
 }
 
-struct PoweredPerson : Codable {
+struct PoweredPerson: Codable {
     let name: String
     let description: String
     let thumbnail: ImgPath
 }
 
-struct ImgPath : Codable {
+struct ImgPath: Codable {
     let path: String
     let format: String
-    
+
     enum CodingKeys: String, CodingKey {
         case path
         case format = "extension"
